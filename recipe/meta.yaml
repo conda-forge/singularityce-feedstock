@@ -1,4 +1,4 @@
-{% set version = "3.9.0" %}
+{% set version = "3.9.1" %}
 
 package:
   name: singularityce
@@ -7,7 +7,7 @@ package:
 source:
   - folder: src/github.com/sylabs/singularityce
     url: https://github.com/sylabs/singularity/releases/download/v{{ version }}/singularity-ce-{{ version }}.tar.gz
-    sha256: 3569928cbd907fe90c52f6a809f5f8e99f597237c5a25a9dce07e3efb3b1447a
+    sha256: 1ba3bb1719a420f48e9b0a6afdb5011f6c786d0f107ef272528c632fff9fd153
     patches:
       - patches/0003-Use-external-CNI.patch
       - patches/0004-Find-unsquashfs-from-PATH.diff
@@ -15,7 +15,7 @@ source:
 
 build:
   number: 0
-  skip: true  # [not linux64]
+  skip: true  # [not linux]
   # The binary is made runtime relocatable using the included patch
   detect_binary_files_with_prefix: false
 
@@ -41,7 +41,7 @@ requirements:
   run_constrained:
     - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.9") }}  # [osx]
     - singularity ==9999999999
-
+    - apptainer ==9999999999
 
 test:
   commands:
@@ -64,15 +64,14 @@ test:
     # ngam 20211115: likely related to below issue re --privileged
     - singularity build lolcow docker://godlovedc/lolcow  # [ppc64le]
     - singularity build --sandbox lolcow docker://godlovedc/lolcow  # [not ppc64le]
-    
-# ngam: 20211125: disabling all until we get to turn on --privileged flag
-#     # The remaining tests are disabled on ppc64le due to issues launching docker with --privileged
-#     # Either run the container or fail due to user namespaces being disabled
-#     - "singularity --verbose --debug run -u lolcow || (singularity --verbose --debug run -u lolcow 2>&1 | grep 'Failed to create user namespace: user namespace requires to set')"  # [linux64]
 
-#     # https://github.com/hpcng/singularity/issues/5668
-#     - singularity pull library://alpine  # [linux64]
-#     - singularity --verbose --debug run -u alpine_latest.sif echo "Hello world"  # [linux64]
+    # The remaining tests are disabled on ppc64le due to issues launching docker with --privileged
+    # Either run the container or fail due to user namespaces being disabled
+    - "singularity --verbose --debug run -u lolcow || (singularity --verbose --debug run -u lolcow 2>&1 | grep 'Failed to create user namespace: user namespace requires to set')"  # [linux64]
+
+    # https://github.com/hpcng/singularity/issues/5668
+    - singularity pull library://alpine  # [linux64]
+    - singularity --verbose --debug run -u alpine_latest.sif echo "Hello world"  # [linux64]
 
 about:
   home: https://www.sylabs.io/singularity/
