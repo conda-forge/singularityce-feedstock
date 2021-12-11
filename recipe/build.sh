@@ -15,9 +15,9 @@ export CGO_CPPFLAGS
 
 # configure
 ./mconfig \
-  -P release-stripped \
+  -P release \
   --without-suid \
-  -p "${PREFIX}" \
+  -prefix "${PREFIX}" \
   -c "${CC}" \
   -x "${CXX}"
 
