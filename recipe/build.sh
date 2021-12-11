@@ -17,7 +17,7 @@ export CGO_CPPFLAGS
 ./mconfig \
   -P release \
   --without-suid \
-  -prefix "${PREFIX}" \
+  --prefix "${PREFIX}" \
   -c "${CC}" \
   -x "${CXX}"
 
