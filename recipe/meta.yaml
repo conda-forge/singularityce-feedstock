@@ -28,7 +28,7 @@ requirements:
     - make
     - pkg-config
     - go-dep
-    - go >= 1.13
+    - go >=1.13
     - sed
   host:
     - libuuid  # [linux]
