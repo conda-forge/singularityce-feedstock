@@ -53,6 +53,9 @@ test:
 
     # Ensure the version is set correctly
     - singularity --version | grep {{ version }}
+    
+    # print out build summary
+    - singularity buildcfg
 
     # Ensure we are using conda's CNI
     - test ! -d $PREFIX/libexec/singularity/cni
