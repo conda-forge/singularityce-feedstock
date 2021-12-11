@@ -28,18 +28,19 @@ requirements:
     - make
     - pkg-config
     - go-dep
-    - go >=1.13
+    - go >=1.16
     - sed
   host:
     - libuuid  # [linux]
     - libarchive
     - libseccomp  # [linux]
     - openssl
+    - go >=1.16
   run:
     # CNI version from singularity/Gopkg.lock
     - cni-plugins >=0.7.4  # [linux]
     - squashfs-tools >=4.3  # [linux]
-    - go
+    - go >=1.16
   run_constrained:
     - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.9") }}  # [osx]
     - singularity ==9999999999
