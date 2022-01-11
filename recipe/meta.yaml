@@ -1,4 +1,4 @@
-{% set version = "3.9.2" %}
+{% set version = "3.9.3" %}
 
 package:
   name: singularityce
@@ -7,7 +7,7 @@ package:
 source:
   - folder: src/github.com/sylabs/singularityce
     url: https://github.com/sylabs/singularity/releases/download/v{{ version }}/singularity-ce-{{ version }}.tar.gz
-    sha256: 3c719b237ee0f619cb513826ac7434dce3f0129973c32a4594338b34221ed28d
+    sha256: 2d03e602ced77396b4eb3aa2666f3f9a4239742f9237d12053d7c916a2982313
     patches:
       - patches/0003-Use-external-CNI.patch
       - patches/0004-Find-unsquashfs-from-PATH.diff
@@ -79,7 +79,7 @@ about:
   license_file: src/github.com/sylabs/singularityce/LICENSE-LBNL.md
   summary: SingularityCE is the Community Edition of Singularity, an open source container platform designed to be simple, fast, and secure.
 
-  description: |
+  description: |4
 
     SingularityCE is the Community Edition of Singularity, 
     an open source container platform designed to be 
