@@ -79,12 +79,10 @@ about:
   license_file: src/github.com/sylabs/singularityce/LICENSE-LBNL.md
   summary: SingularityCE is the Community Edition of Singularity, an open source container platform designed to be simple, fast, and secure.
 
-  description: |4
-
+  description: |
     SingularityCE is the Community Edition of Singularity, 
     an open source container platform designed to be 
     simple, fast, and secure.
-
 
     Singularity is a container platform focused on supporting "Mobility of
     Compute"
