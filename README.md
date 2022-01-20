@@ -13,11 +13,9 @@ Development: https://github.com/sylabs/singularity
 
 Documentation: https://www.sylabs.io/docs/
 
-
 SingularityCE is the Community Edition of Singularity,
 an open source container platform designed to be
 simple, fast, and secure.
-
 
 Singularity is a container platform focused on supporting "Mobility of
 Compute"
@@ -36,14 +34,7 @@ Current build status
 ====================
 
 
-<table><tr>
-    <td>Travis</td>
-    <td>
-      <a href="https://travis-ci.com/conda-forge/singularityce-feedstock">
-        <img alt="macOS" src="https://img.shields.io/travis/com/conda-forge/singularityce-feedstock/master.svg?label=macOS">
-      </a>
-    </td>
-  </tr>
+<table>
     
   <tr>
     <td>Azure</td>
