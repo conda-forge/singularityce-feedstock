@@ -13,11 +13,9 @@ Development: https://github.com/sylabs/singularity
 
 Documentation: https://www.sylabs.io/docs/
 
-
 SingularityCE is the Community Edition of Singularity,
 an open source container platform designed to be
 simple, fast, and secure.
-
 
 Singularity is a container platform focused on supporting "Mobility of
 Compute"
