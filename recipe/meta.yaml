@@ -76,7 +76,10 @@ test:
 about:
   home: https://www.sylabs.io/singularity/
   license: BSD-3-Clause
-  license_file: src/github.com/sylabs/singularityce/LICENSE-LBNL.md
+  license_file: 
+    - src/github.com/sylabs/singularityce/LICENSE.md
+    - src/github.com/sylabs/singularityce/LICENSE_THIRD_PARTY.md
+    - src/github.com/sylabs/singularityce/LICENSE_DEPENDENCIES.md
   summary: SingularityCE is the Community Edition of Singularity, an open source container platform designed to be simple, fast, and secure.
 
   description: |
