@@ -71,7 +71,7 @@ index 67e537259..6f108faf5 100644
  }
  
  // unsquashfsSandboxCmd is the command instance for executing unsquashfs command
-@@ -173,7 +173,7 @@ func unsquashfsSandboxCmd(unsquashfs string, dest string, filename string, filte
+@@ -174,7 +174,7 @@ func unsquashfsSandboxCmd(unsquashfs string, dest string, filename string, filte
  	}
  
  	// get the library dependencies of unsquashfs
@@ -80,7 +80,7 @@ index 67e537259..6f108faf5 100644
  	if err != nil {
  		return nil, err
  	}
-@@ -218,6 +218,9 @@ func unsquashfsSandboxCmd(unsquashfs string, dest string, filename string, filte
+@@ -219,6 +219,9 @@ func unsquashfsSandboxCmd(unsquashfs string, dest string, filename string, filte
  	args = append(args, rootfs)
  
  	// unsquashfs execution arguments
