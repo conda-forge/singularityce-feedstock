@@ -10,7 +10,7 @@ source:
     sha256: 03b084b3dd8ff20ccde646dd87de8433d72519748dfe753d4af9214b91363373
     patches:
       - patches/0003-Use-external-CNI.patch
-      - patches/0004-Find-unsquashfs-from-PATH.diff
+#       - patches/0004-Find-unsquashfs-from-PATH.diff
       - patches/set-version-from-env.patch
 
 build:
