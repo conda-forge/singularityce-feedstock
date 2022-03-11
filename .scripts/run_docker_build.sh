@@ -14,7 +14,7 @@ set -xeo pipefail
 THISDIR="$( cd "$( dirname "$0" )" >/dev/null && pwd )"
 PROVIDER_DIR="$(basename $THISDIR)"
 
-FEEDSTOCK_ROOT=$(cd "$(dirname "$0")/.."; pwd;)
+FEEDSTOCK_ROOT="$( cd "$( dirname "$0" )/.." >/dev/null && pwd )"
 RECIPE_ROOT="${FEEDSTOCK_ROOT}/recipe"
 
 if [ -z ${FEEDSTOCK_NAME} ]; then
@@ -87,7 +87,6 @@ docker run ${DOCKER_RUN_ARGS} \
            -e GIT_BRANCH \
            -e UPLOAD_ON_BRANCH \
            -e CI \
-           --privileged \
            -e FEEDSTOCK_NAME \
            -e CPU_COUNT \
            -e BUILD_WITH_CONDA_DEBUG \
