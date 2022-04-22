@@ -1,4 +1,4 @@
-{% set version = "3.9.8" %}
+{% set version = "3.9.9" %}
 
 package:
   name: singularityce
@@ -7,7 +7,7 @@ package:
 source:
   - folder: src/github.com/sylabs/singularityce
     url: https://github.com/sylabs/singularity/releases/download/v{{ version }}/singularity-ce-{{ version }}.tar.gz
-    sha256: 47ec60e559932bddd1594a7d633d6c7fccd81064a1f00c382eec9c6eeb121939
+    sha256: 1381433d64138c08e93ffacdfb4844e82c2288f1e39a9d2c631a1c4021381f2a
     patches:
       - patches/0003-Use-external-CNI.patch
 #       - patches/0004-Find-unsquashfs-from-PATH.diff
