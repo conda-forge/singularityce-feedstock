@@ -29,8 +29,9 @@ requirements:
     - pkg-config
     - go-dep
     - sed
-    - glib
-    - libglib
+    - {{ cdt('glib2') }}     # [linux]
+    - {{ cdt('glib2-devel') }}     # [linux]
+
   host:
     - libuuid  # [linux]
     - libarchive
