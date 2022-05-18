@@ -29,6 +29,8 @@ requirements:
     - pkg-config
     - go-dep
     - sed
+    - glib
+    - libglib
   host:
     - libuuid  # [linux]
     - libarchive
