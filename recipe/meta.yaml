@@ -32,6 +32,7 @@ requirements:
     - {{ cdt('glib2') }}     # [linux]
     - {{ cdt('glib2-devel') }}     # [linux]
     - glib
+    - conmon
 
   host:
     - libuuid  # [linux]
