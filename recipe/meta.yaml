@@ -10,11 +10,11 @@ source:
     sha256: 5e22e6cdad66c331668f6cff4544c83917bb3db90da3cf92403a394c5bf8cc8f
     patches:
       - patches/0003-Use-external-CNI.patch
-#       - patches/0004-Find-unsquashfs-from-PATH.diff
+      - patches/0004-Find-unsquashfs-from-PATH.diff
       - patches/set-version-from-env.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [not linux]
   # The binary is made runtime relocatable using the included patch
   detect_binary_files_with_prefix: false
