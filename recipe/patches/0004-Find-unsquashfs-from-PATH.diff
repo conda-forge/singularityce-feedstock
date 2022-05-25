@@ -22,7 +22,7 @@ index bde71e71a..82031796e 100644
  // getLibraryBinds returns the library bind mounts required by an elf binary.
  // The binary path must be absolute.
 -func getLibraryBinds(binary string) ([]libBind, error) {
-+func getLibraryBinds(binary string) (libBind, []libBind, error) {
++func getLibraryBinds(binary string) ([]libBind, error ) {
  	exe, err := elf.Open(binary)
  	if err != nil {
 -		return nil, err
