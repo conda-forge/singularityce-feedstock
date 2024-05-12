@@ -1,4 +1,4 @@
-{% set version = "3.10.0" %}
+{% set version = "3.10.3" %}
 
 package:
   name: singularityce
@@ -7,14 +7,14 @@ package:
 source:
   - folder: src/github.com/sylabs/singularityce
     url: https://github.com/sylabs/singularity/releases/download/v{{ version }}/singularity-ce-{{ version }}.tar.gz
-    sha256: 5e22e6cdad66c331668f6cff4544c83917bb3db90da3cf92403a394c5bf8cc8f
+    sha256: f87d8e212ce209c5212d6faf253b97a24b5d0b6e6b17b5e58b316cdda27a332f
     patches:
       - patches/0003-Use-external-CNI.patch
       - patches/0004-Find-unsquashfs-from-PATH.diff
       - patches/set-version-from-env.patch
 
 build:
-  number: 1
+  number: 0
   skip: true  # [not linux]
   # The binary is made runtime relocatable using the included patch
   detect_binary_files_with_prefix: false
