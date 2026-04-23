@@ -22,9 +22,6 @@ libuuid:
 - '2'
 openssl:
 - 1.1.1
-pin_run_as_build:
-  libuuid:
-    max_pin: x
 target_platform:
 - linux-64
 zip_keys:
